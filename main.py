@@ -29,10 +29,8 @@ def main():
         answer_state = screen.textinput(title=f"{correct}/50 States Correct", prompt="What's another state's name?")
 
         if answer_state.title() == "Exit":
-            states_to_learn = []
-            for state in states:
-                if state not in guessed_states:
-                    states_to_learn.append(state)
+            # Add un-guessed states to list
+            states_to_learn = [state for state in states if state not in guessed_states]
             states_to_learn_df = pandas.DataFrame(states_to_learn, columns=['states'])
             states_to_learn_df.to_csv('states_to_learn.csv')
             break
