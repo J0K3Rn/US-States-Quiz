@@ -9,6 +9,7 @@ Features:
 How to run:
 - Download repository
 - Open downloaded repository with a command line interface
+- run `pip install pandas`
 - run `python main.py`
 - Game window will open
 - Type in a correct state name and the name will be marked on the map
